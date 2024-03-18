@@ -193,11 +193,11 @@ function fourOfAKind() {
       document.getElementById("fourOfaKind").textContent = fourOfAKindtotaalSpeler1;
       threeOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
 
-      threeOfAKindtotaal
-      return true; 
+      
+      return true;
     }
   }
-  document.getElementById("fourOfaKind").textContent = "No";
+  document.getElementById("fourOfaKind").textContent = "No Four of a Kind";
   return false; 
 }
 
@@ -271,24 +271,26 @@ function largeStraight() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 1; i++) {
     if (sortedDiceValues[i] + 1 !== sortedDiceValues[i + 1]) {
-      document.getElementById("largeStraight").textContent = largeStraightSpeler1;
-      largeStraightSpeler1 = 40;
+      document.getElementById("largeStraight").textContent = "No Large Straight";
+      
       return false; 
     }
   }
-  document.getElementById("largeStraight").textContent = "yes!";
+  document.getElementById("largeStraight").textContent = largeStraightSpeler1;
+  largeStraightSpeler1 = 40;
   return true; 
 }
 function largeStraightspeler2() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 1; i++) {
     if (sortedDiceValues[i] + 1 !== sortedDiceValues[i + 1]) {
-      document.getElementById("largeStraightSpeler2").textContent = largeStraightSpeler2;
-      largeStraightSpeler2 = 40;
+      document.getElementById("largeStraightSpeler2").textContent = "No large straight";
       return false; 
     }
   }
-  document.getElementById("largeStraight").textContent = "yes!";
+  largeStraightSpeler2 = 40;
+
+  document.getElementById("largeStraight").textContent = largeStraightSpeler2;
   return true; 
 }
 
@@ -306,7 +308,7 @@ function smallStraight() {
   document.getElementById("smallStraight").textContent = "No";
   return false; 
 }
-function smallStraight2() {
+function smallStraightSpeler2() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 2; i++) {
     if (sortedDiceValues[i] + 1 === sortedDiceValues[i + 1] &&
@@ -345,8 +347,8 @@ function yahtzeesspeler2() {
   }
   for (let i = 0; i < 6; i++) {
     if (counts[i] === 5) {
-      document.getElementById("yahtzeeSpeler2").textContent = yahtzeeSpeler2;
-      yahtzeeSpeler2 = 50;
+      document.getElementById("yahtzeeSpeler2").textContent = yahtzeespeler2;
+      yahtzeespeler2 = 50;
       return true; 
     }
   }
@@ -355,21 +357,15 @@ function yahtzeesspeler2() {
 }
 
 function totalScore() {
-  totalPlayer1 = (enenSpeler1 * 1) + (tweeënSpeler1 * 2) + (drieeënSpeler1 * 3) + (vierenSpeler1 * 4) + (vijfenSpeler1 * 5) + (zessenSpeler1 * 6) + threeOfAKindtotaalSpeler1 +yahtzeeSpeler1 + fullHouseSpeler1 + smallStraightSpeler1;
+  totalPlayer1 = (enenSpeler1 * 1) + (tweeënSpeler1 * 2) + (drieeënSpeler1 * 3) + (vierenSpeler1 * 4) + (vijfenSpeler1 * 5) + (zessenSpeler1 * 6) + threeOfAKindtotaalSpeler1 + fourOfAKindtotaalSpeler1 + fullHouseSpeler1 + smallStraightSpeler1 + yahtzeeSpeler1;
 
   document.getElementById("totalScore").textContent =totalPlayer1;
 
 }
 
-// function totaleSpeler2() {
-//  totaaleSpeler2 = (enenSpeler2 * 1) + (tweeënSpeler2 * 2) + (drieeënSpeler2 * 3) + (vierenSpeler2 * 4) + (vijfenSpeler2 * 5) + (zessenSpeler2 * 6) + threeOfAKindtotaalSpeler2 +yahtzeeSpeler2 + fullHouseSpeler2 + smallStraightSpeler2;
-
-//   document.getElementById("totalScoreSpeler2").textContent = totaaleSpeler2;
-
-// }
 
 function totaleSpeler2(){
   totaalScore = (enenSpeler2 *1) + (tweeënSpeler2 * 2) + (drieeënSpeler2 * 3) + (vierenSpeler2 * 4) + ( vijfenSpeler2 * 5) + (zessenSpeler2 *6) + threeOfAKindtotaalSpeler2 + fourOfAKindtotaalSpeler2 + fullhouseSpeler2 + smallStraightSpeler2 + yahtzeespeler2;
 
-  document.getElementById("totalScoreSpeler2").textContent = totaalScore
+  document.getElementById("totalScoreSpeler2").textContent = totaalScore;
 }

@@ -8,12 +8,13 @@
 <body>
     <div class="grid">
         <button id="roll" onclick="rollDice()"> Rollen</button>
+        <button id="wisselVanSpeler" onclick="spelerVerwisselen()">Wisselen</button>
     
-    <img onclick="holdDie(1,this)" class="dices" id="dice1" src="dice1.png" alt="Dice 1">
-    <img onclick="holdDie(2,this)" class="dices" id="dice2" src="dice1.png" alt="Dice 1">
-    <img onclick="holdDie(3,this)" class="dices" id="dice3" src="dice1.png" alt="Dice 1">
-    <img onclick="holdDie(4,this)" class="dices" id="dice4" src="dice1.png" alt="Dice 1">
-    <img onclick="holdDie(5,this)" class="dices" id="dice5" src="dice1.png" alt="Dice 1">    
+    <img onclick="vastHouden(1,this)" class="dices" id="dice1" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden(2,this)" class="dices" id="dice2" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden(3,this)" class="dices" id="dice3" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden(4,this)" class="dices" id="dice4" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden(5,this)" class="dices" id="dice5" src="dice1.png" alt="Dice 1">    
 
         <p id="rolls">3</p>
 
@@ -56,7 +57,7 @@
                 </tr>
                 <tr>
                     <th > Six's</th>
-                    <th id="zessenSpeler2" onclick="selecteer6Speler1()">  </th>
+                    <th id="zessenSpeler1" onclick="selecteer6Speler1()">  </th>
                     <th id="zessenSpeler2" onclick="selecteer6Speler2()"></th>
 
                 </tr>
@@ -78,7 +79,7 @@
                 <tr>
                     <th>small straight</th>
                     <th  id="smallStraight" onclick="smallStraight()"> </th>
-                    <th  id="smallStraightSpeler2" onclick="smallStraight2()"> </th>
+                    <th  id="smallStraightSpeler2" onclick="smallStraightSpeler2()"> </th>
                 </tr>
                 <tr>
                     <th >Large Straight</th>
