@@ -8,12 +8,21 @@
 <body>
     <div class="grid">
         <button id="roll" onclick="rollDice()"> Rollen</button>
+<<<<<<< Updated upstream
     
     <img onclick="holdDie(1,this)" class="dices" id="dice1" src="dice1.png" alt="Dice 1">
     <img onclick="holdDie(2,this)" class="dices" id="dice2" src="dice1.png" alt="Dice 1">
     <img onclick="holdDie(3,this)" class="dices" id="dice3" src="dice1.png" alt="Dice 1">
     <img onclick="holdDie(4,this)" class="dices" id="dice4" src="dice1.png" alt="Dice 1">
     <img onclick="holdDie(5,this)" class="dices" id="dice5" src="dice1.png" alt="Dice 1">    
+=======
+        <button id="wisselVanSpeler" onclick="spelerVerwisselen()">Wissel Van Speler</button>
+    <img onclick="vastHouden (1,this)" class="dices" id="dice1" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden (2,this)" class="dices" id="dice2" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden (3,this)" class="dices" id="dice3" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden (4,this)" class="dices" id="dice4" src="dice1.png" alt="Dice 1">
+    <img onclick="vastHouden (5,this)" class="dices" id="dice5" src="dice1.png" alt="Dice 1">    
+>>>>>>> Stashed changes
 
         <p id="rolls">3</p>
 
@@ -26,6 +35,7 @@
                 </tr>
                 <tr>
                     <th > Ones</th>
+<<<<<<< Updated upstream
                     <th > </th>
                     <th > </th>
 
@@ -100,6 +110,76 @@
                     <th >Total Score</th>
                     <th > </th>
                     <th > </th>
+=======
+                    <th id="enenSpeler1" onclick="selecteer1Speler1()"> </th>
+                    <th id="enenSpeler2" onclick="selecteer1Speler2()"> </th>
+
+                </tr>
+                <tr>
+                    <th > Twos</th>
+                    <th id="tweeënSpeler1" onclick="selecteer2Speler1()"> </th> 
+                    <th id="tweeënSpeler2" onclick="selecteer2Speler2()"> </th>
+
+                </tr>
+                <tr>
+                    <th > Threes</th>
+                    <th id="drieeënSpeler1" onclick="selecteer3Speler1()"> </th>
+                    <th id="drieeënSpeler2" onclick="selecteer3Speler2()"> </th>
+
+                </tr>
+                <tr>
+                    <th > Fours</th>
+                    <th id="vierenSpeler1" onclick="selecteer4Speler1()"> </th>
+                    <th id="vierenSpeler2" onclick="selecteer4Speler2()"> </th>
+
+                </tr>
+                <tr>
+                    <th > Fives</th>
+                    <th id="vijfenSpeler1" onclick="selecteer5Speler1()"> </th>
+                    <th id="vijfenSpeler2" onclick="selecteer5Speler2()"> </th>
+
+                </tr>
+                <tr>
+                    <th > Six's</th>
+                    <th id="zessenSpeler2" onclick="selecteer6Speler1()">  </th>
+                    <th id="zessenSpeler2" onclick="selecteer6Speler2()"></th>
+
+                </tr>
+                <tr>
+                    <th >Three of a Kind</th>
+                    <th id="threeOfaKind" onclick="threeOfAKind()" > </th>
+                    <th id="threeOfaKindSpeler2" onclick="threeOfAKindSpeler2()"></th>
+                </tr>
+                <tr>
+                    <th>Four of a Kind</th>
+                    <th id="fourOfaKind" onclick="fourOfAKind()"> </th>
+                    <th id="fourOfaKindSpeler2" onclick="fourOfAKindSpeler2()"> </th>
+                </tr>
+                <tr>
+                    <th >Full House</th>
+                    <th id="fullHouse" onclick="fullHouse()"> </th>
+                    <th id="fullHouseSpeler2" onclick="fullHousSpeler2()"> </th>
+                </tr>
+                <tr>
+                    <th>small straight</th>
+                    <th  id="smallStraight" onclick="smallStraight()"> </th>
+                    <th  id="smallStraightSpeler2" onclick="smallStraight2()"> </th>
+                </tr>
+                <tr>
+                    <th >Large Straight</th>
+                    <th  id="largeStraight" onclick="largeStraight()"> </th>
+                    <th id="largeStraightSpeler2" onclick="largeStraightspeler2()"> </th>
+                </tr>
+                <tr>
+                    <th  >Yahtzee</th>
+                    <th id="yahtzee" onclick="yahtzee()"> </th>
+                    <th id="yahtzeeSpeler2" onclick="yahtzeesspeler2()"> </th>
+                </tr>
+                <tr>
+                    <th >Total Score</th>
+                    <th id="totalScore" onclick="totalScore()"> </th>
+                    <th id="totalScoreSpeler2" onclick="totaleSpeler2()"> </th>
+>>>>>>> Stashed changes
                 </tr>
                 
             </table>
