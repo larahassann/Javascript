@@ -7,7 +7,7 @@
 
 <body>
     <div class="grid">
-        <button id="roll" onclick="rollDice()"> Rollen</button>
+        <button id="roll" onclick="rollen()"> Rollen</button>
         <button id="wisselVanSpeler" onclick="spelerVerwisselen()">Wisselen</button>
     
     <img onclick="vastHouden(1,this)" class="dices" id="dice1" src="dice1.png" alt="Dice 1">
@@ -79,7 +79,7 @@
                 <tr>
                     <th>small straight</th>
                     <th  id="smallStraight" onclick="smallStraight()"> </th>
-                    <th  id="smallStraightSpeler2" onclick="smallStraightSpeler2()"> </th>
+                    <th  id="smallStraightSpeler2" onclick="smallstraightSpeler2()"> </th>
                 </tr>
                 <tr>
                     <th >Large Straight</th>
@@ -93,10 +93,9 @@
                 </tr>
                 <tr>
                     <th >Total Score</th>
-                    <th id="totalScore" onclick="totalScore()"> </th>
+                    <th id="totalScoreSpeler1" onclick="totalScoreSpeler1()"> </th>
                     <th id="totalScoreSpeler2" onclick="totaleSpeler2()"> </th>
                 </tr>
-                
             </table>
         </div>
     </div>

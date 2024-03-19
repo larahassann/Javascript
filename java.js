@@ -31,7 +31,7 @@ let largeStraightSpeler1=0;
 let largeStraightSpeler2=0;
 
 
-function rollDice() {
+function rollen() {
   if (rolls == 0) {
     alert("geen kansen meer!");
     return;
@@ -82,63 +82,63 @@ function spelerVerwisselen(){
 
 function selecteer1Speler1() {
  enenSpeler1 = diceValues.filter(value => value === 1).length;
-  console.log("Number of ones: " + enenSpeler1);
-  document.getElementById("enenSpeler1").textContent = enenSpeler1; 
   
+  document.getElementById("enenSpeler1").textContent = enenSpeler1 * 1; 
+  console.log("Number of ones: " + enenSpeler1);
 }
 function selecteer1Speler2() {
  enenSpeler2 = diceValues.filter(value => value === 1).length;
-  document.getElementById("enenSpeler2").textContent = enenSpeler2; 
+  document.getElementById("enenSpeler2").textContent = enenSpeler2 *1; 
   console.log("Number of ones: " + enenSpeler2);
 }
 function selecteer2Speler1() {
  tweeënSpeler1 = diceValues.filter(value => value === 2).length;
-  document.getElementById("tweeënSpeler1").textContent = tweeënSpeler1; 
+  document.getElementById("tweeënSpeler1").textContent = tweeënSpeler1 *2; 
   console.log("Number of Twos: " + tweeënSpeler1);
 }
 function selecteer2Speler2() {
  tweeënSpeler2 = diceValues.filter(value => value === 2).length;
-  document.getElementById("tweeënSpeler2").textContent = tweeënSpeler2; 
+  document.getElementById("tweeënSpeler2").textContent = tweeënSpeler2 * 2; 
   console.log("Number of Twos: " + tweeënSpeler2);
 }
 function selecteer3Speler1() {
  drieeënSpeler1 = diceValues.filter(value => value === 3).length;
-  document.getElementById("drieeënSpeler1").textContent = drieeënSpeler1; 
+  document.getElementById("drieeënSpeler1").textContent = drieeënSpeler1 * 3; 
   console.log("Number of threes: " + drieeënSpeler1);
 }
 function selecteer3Speler2() {
  drieeënSpeler2 = diceValues.filter(value => value === 3).length;
-  document.getElementById("drieeënSpeler2").textContent = drieeënSpeler2; 
+  document.getElementById("drieeënSpeler2").textContent = drieeënSpeler2 *3; 
   console.log("Number of threes: " + drieeënSpeler2);
 }
 function selecteer4Speler1() {
  vierenSpeler1 = diceValues.filter(value => value === 4).length;
-  document.getElementById("vierenSpeler1").textContent = vierenSpeler1; 
-  console.log("Number of fours: " + foursCountPlayer1);
+  document.getElementById("vierenSpeler1").textContent = vierenSpeler1 *4; 
+  console.log("Number of fours: " + vierenSpeler1);
 }
 function selecteer4Speler2() {
  vierenSpeler2 = diceValues.filter(value => value === 4).length;
-  document.getElementById("vierenSpeler2").textContent = vierenSpeler2; 
+  document.getElementById("vierenSpeler2").textContent = vierenSpeler2 *4; 
   console.log("Number of fours: " + vierenSpeler2);
 }
 function selecteer5Speler1() {
  vijfenSpeler1 = diceValues.filter(value => value === 5).length;
-  document.getElementById("vijfenSpeler1").textContent = vijfenSpeler1;
+  document.getElementById("vijfenSpeler1").textContent = vijfenSpeler1 *5;
   console.log("Number of fives: " + vijfenSpeler1);
 }
 function selecteer5Speler2() {
  vijfenSpeler2 = diceValues.filter(value => value === 5).length;
-  document.getElementById("vijfenSpeler2").textContent = vijfenSpeler2;
+  document.getElementById("vijfenSpeler2").textContent = vijfenSpeler2 *5;
   console.log("Number of fives: " + vijfenSpeler2);
 }
 function selecteer6Speler1() {
  zessenSpeler1 = diceValues.filter(value => value === 6).length;
-  document.getElementById("zessenSpeler1").textContent = zessenSpeler1;
+  document.getElementById("zessenSpeler1").textContent = zessenSpeler1 *6;
   console.log("Number of sixes: " + zessenSpeler1);
 }
-function selecteer6Speler1() {
+function selecteer6Speler2() {
  zessenSpeler2 = diceValues.filter(value => value === 6).length;
-  document.getElementById("zessenSpeler2").textContent = zessenSpeler2;
+  document.getElementById("zessenSpeler2").textContent = zessenSpeler2 *6;
   console.log("Number of sixes: " + zessenSpeler2);
 }
 
@@ -157,7 +157,7 @@ function threeOfAKind() {
     tellen[value - 1]++; 
   }
   for (let i = 0; i < 6; i++) {
-    if (tellen[i] >= 3) {
+    if (tellen[i] == 3) {
       document.getElementById("threeOfaKind").textContent = threeOfAKindtotaalSpeler1;
       threeOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
       return true; 
@@ -173,13 +173,14 @@ function threeOfAKindSpeler2() {
     tellen[value - 1]++; 
   }
   for (let i = 0; i < 6; i++) {
-    if (tellen[i] >= 3) {
+    if (tellen[i] == 3) {
+      
+      threeOfAKindtotaalSpeler2 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4];
       document.getElementById("threeOfaKindSpeler2").textContent = threeOfAKindtotaalSpeler2;
-      threeOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4];
       return true; 
     }
   }
-  document.getElementById("threeOfaKind").textContent = "No";
+  document.getElementById("threeOfaKindSpeler2").textContent = "No";
   return false; 
 }
 
@@ -189,15 +190,15 @@ function fourOfAKind() {
     tellen[value - 1]++; 
   }
   for (let i = 0; i < 6; i++) {
-    if (tellen[i] >= 4) {
+    if (tellen[i] == 4) {
+      
+      fourOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
       document.getElementById("fourOfaKind").textContent = fourOfAKindtotaalSpeler1;
-      threeOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
-
       
       return true;
     }
   }
-  document.getElementById("fourOfaKind").textContent = "No Four of a Kind";
+  document.getElementById("fourOfaKind").textContent = "No";
   return false; 
 }
 
@@ -207,15 +208,15 @@ function fourOfAKindSpeler2() {
     tellen[value - 1]++; 
   }
   for (let i = 0; i < 6; i++) {
-    if (tellen[i] >= 4) {
+    if (tellen[i] == 4) {
       document.getElementById("fourOfaKindSpeler2").textContent = fourOfAKindtotaalSpeler2;
-      threeOfAKindtotaalSpeler1 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
+      fourOfAKindtotaalSpeler2 = diceValues[0] + diceValues[1] + diceValues [2] + diceValues [3] + diceValues [4] ;
 
-      threeOfAKindtotaal
+      
       return true; 
     }
   }
-  document.getElementById("fourOfaKind").textContent = "No";
+  document.getElementById("fourOfaKindSpeler2").textContent = "No";
   return false; 
 }
 
@@ -262,7 +263,7 @@ function fullHousSpeler2() {
     fullhouseSpeler2 = 25;
     return true; 
   } else {
-    document.getElementById("fullHouse").textContent = "No";
+    document.getElementById("fullHouseSpeler2").textContent = "No";
     return false; 
   }
 }
@@ -271,7 +272,7 @@ function largeStraight() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 1; i++) {
     if (sortedDiceValues[i] + 1 !== sortedDiceValues[i + 1]) {
-      document.getElementById("largeStraight").textContent = "No Large Straight";
+      document.getElementById("largeStraight").textContent = "No";
       
       return false; 
     }
@@ -284,13 +285,13 @@ function largeStraightspeler2() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 1; i++) {
     if (sortedDiceValues[i] + 1 !== sortedDiceValues[i + 1]) {
-      document.getElementById("largeStraightSpeler2").textContent = "No large straight";
+      document.getElementById("largeStraightSpeler2").textContent = "No";
       return false; 
     }
   }
   largeStraightSpeler2 = 40;
 
-  document.getElementById("largeStraight").textContent = largeStraightSpeler2;
+  document.getElementById("largeStraightSpeler2").textContent = largeStraightSpeler2;
   return true; 
 }
 
@@ -308,7 +309,7 @@ function smallStraight() {
   document.getElementById("smallStraight").textContent = "No";
   return false; 
 }
-function smallStraightSpeler2() {
+function smallstraightSpeler2() {
   const sortedDiceValues = diceValues.slice().sort((a, b) => a - b);
   for (let i = 0; i < sortedDiceValues.length - 2; i++) {
     if (sortedDiceValues[i] + 1 === sortedDiceValues[i + 1] &&
@@ -318,7 +319,7 @@ function smallStraightSpeler2() {
       return true;
     }
   }
-  document.getElementById("smallStraight").textContent = "No";
+  document.getElementById("smallStraightSpeler2").textContent = "No";
   return false; 
 }
 
@@ -352,14 +353,14 @@ function yahtzeesspeler2() {
       return true; 
     }
   }
-  document.getElementById("yahtzee").textContent = "No";
+  document.getElementById("yahtzeeSpeler2").textContent = "No";
   return false; 
 }
 
-function totalScore() {
+function totalScoreSpeler1() {
   totalPlayer1 = (enenSpeler1 * 1) + (tweeënSpeler1 * 2) + (drieeënSpeler1 * 3) + (vierenSpeler1 * 4) + (vijfenSpeler1 * 5) + (zessenSpeler1 * 6) + threeOfAKindtotaalSpeler1 + fourOfAKindtotaalSpeler1 + fullHouseSpeler1 + smallStraightSpeler1 + yahtzeeSpeler1;
 
-  document.getElementById("totalScore").textContent =totalPlayer1;
+  document.getElementById("totalScoreSpeler1").textContent =totalPlayer1;
 
 }
 
